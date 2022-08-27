@@ -4,25 +4,23 @@ public class Empresa {
 
     private String nombre_empresa;
     private String direccion;
-    private String telefono;
-    private String nit;
+    private int telefono;
+    private int nit;
 
-    public Empresa(String nombre_empresa, String direccion, String telefono, String nit) {
+    public Empresa(String nombre_empresa, String direccion, int telefono, int nit) {
         this.nombre_empresa = nombre_empresa;
         this.direccion = direccion;
         this.telefono = telefono;
         this.nit = nit;
     }
 
-    public void obtener_datos(){
-        System.out.println("La direccion de la empresa es " + " " + getDireccion() );
-        System.out.println("El nombre de la empresa" + " "+ getNombre_empresa());
+
+    public void obtener_datos() {
+        System.out.println("La direccion de la empresa es " + " " + getDireccion());
+        System.out.println("El nombre de la empresa" + " " + getNombre_empresa());
         System.out.println("El telefono de la empresa" + " " + getTelefono());
-        System.out.println("El NIT de la empresa es: " + " "+ getNit());
-
+        System.out.println("El NIT de la empresa es: " + " " + getNit());
     }
-
-
 
     public String getNombre_empresa() {
         return nombre_empresa;
@@ -40,20 +38,23 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
-    public String getNit() {
+    public int getNit() {
         return nit;
     }
 
-    public void setNit(String nit) {
+    public void setNit(int nit) {
         this.nit = nit;
     }
 }
+
+
+
 
