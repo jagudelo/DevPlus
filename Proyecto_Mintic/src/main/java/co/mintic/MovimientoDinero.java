@@ -34,4 +34,6 @@ public class MovimientoDinero {
     public String Usuario_Movimiento(){
         return "";
     }
+
+    /* Comentario */
 }
