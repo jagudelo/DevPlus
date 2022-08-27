@@ -36,4 +36,6 @@ public class MovimientoDinero {
     }
 
     /* Comentario */
+    /* Movimiento de dinero  */
+
 }
