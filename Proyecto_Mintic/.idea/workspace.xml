@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a7f849b1-9a04-4b80-86a5-ebbb09e6bcdf" name="Changes" comment="">
 <<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/mintic/MovimientoDinero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/mintic/MovimientoDinero.java" afterDir="false" />
+=======
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/co/mintic/empleado.java" afterDir="false" />
 =======
 >>>>>>> 1f512f5c94485a5624164b36aecd6fb25990a044
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> f83b225b1523a2c1e97b454930327603b41af409
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
