@@ -1,13 +1,13 @@
 package co.mintic;
 
-public class empleado {
+public class Empleado {
 
     private String nombreEmpleado;
     private String correoEmpleado;
     private String empresaEmpleado;
     private String empleadoRol;
 
-    public empleado (String nombreEmpleado, String correoEmpleado, String empresaEmpleado, String empleadoRol){
+    public Empleado (String nombreEmpleado, String correoEmpleado, String empresaEmpleado, String empleadoRol){
 
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
