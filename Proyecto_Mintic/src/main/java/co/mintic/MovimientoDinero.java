@@ -15,14 +15,17 @@ public class MovimientoDinero {
     }
 
     public void setConcepto_Movimiento(String concepto_Movimiento) {
+
         Concepto_Movimiento = concepto_Movimiento;
     }
 
     public int getMonto_Movimiento() {
+
         return Monto_Movimiento;
     }
 
     public void setMonto_Movimiento(int monto_Movimiento) {
+
         Monto_Movimiento = monto_Movimiento;
     }
 
