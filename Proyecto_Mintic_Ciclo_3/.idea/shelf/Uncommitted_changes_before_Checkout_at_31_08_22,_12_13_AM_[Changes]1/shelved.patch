@@ -1,0 +1,121 @@
+Index: .idea/git_toolbox_prj.xml
+===================================================================
+diff --git a/.idea/git_toolbox_prj.xml b/.idea/git_toolbox_prj.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/git_toolbox_prj.xml	
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GitToolBoxProjectSettings">
++    <option name="commitMessageIssueKeyValidationOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++    <option name="commitMessageValidationEnabledOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/co/Mintic/Ciclo3/Entidades/Empresa.java
+===================================================================
+diff --git a/src/main/java/co/Mintic/Ciclo3/Entidades/Empresa.java b/src/main/java/co/Mintic/Ciclo3/Entidades/Empresa.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/co/Mintic/Ciclo3/Entidades/Empresa.java	
+@@ -0,0 +1,69 @@
++package co.Mintic.Ciclo3.Entidades;
++
++import javax.persistence.*;
++
++
++@Entity
++@Table(name="Empresa")
++public class Empresa {
++    @Id
++    @GeneratedValue(strategy = GenerationType.AUTO)
++    private int id;
++    private String nombre;
++    private String direccion;
++    private String telefono;
++    private String NIT;
++
++    public Empresa() {
++
++    }
++
++    public Empresa(String nombre, String direccion, String telefono, String NIT) {
++        this.nombre = nombre;
++        this.direccion = direccion;
++        this.telefono = telefono;
++        this.NIT = NIT;
++    }
++
++    public int getId() {
++        return id;
++    }
++
++    public void setId(int id) {
++        this.id = id;
++    }
++
++    public String getNombre() {
++        return nombre;
++    }
++
++    public void setNombre(String nombre) {
++        this.nombre = nombre;
++    }
++
++    public String getDireccion() {
++        return direccion;
++    }
++
++    public void setDireccion(String direccion) {
++        this.direccion = direccion;
++    }
++
++    public String getTelefono() {
++        return telefono;
++    }
++
++    public void setTelefono(String telefono) {
++        this.telefono = telefono;
++    }
++
++    public String getNIT() {
++        return NIT;
++    }
++
++    public void setNIT(String NIT) {
++        this.NIT = NIT;
++    }
++}
++
++
+Index: src/main/java/co/Mintic/Ciclo3/Entidades/Empleado.java
+===================================================================
+diff --git a/src/main/java/co/Mintic/Ciclo3/Entidades/Empleado.java b/src/main/java/co/Mintic/Ciclo3/Entidades/Empleado.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/co/Mintic/Ciclo3/Entidades/Empleado.java	
+@@ -0,0 +1,4 @@
++package co.Mintic.Ciclo3.Entidades;
++
++public class Empleado {
++}
+Index: src/main/java/co/Mintic/Ciclo3/Entidades/MovimientoDinero.java
+===================================================================
+diff --git a/src/main/java/co/Mintic/Ciclo3/Entidades/MovimientoDinero.java b/src/main/java/co/Mintic/Ciclo3/Entidades/MovimientoDinero.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/co/Mintic/Ciclo3/Entidades/MovimientoDinero.java	
+@@ -0,0 +1,4 @@
++package co.Mintic.Ciclo3.Entidades;
++
++public class MovimientoDinero {
++}
