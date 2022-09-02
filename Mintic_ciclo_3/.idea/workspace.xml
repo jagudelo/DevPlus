@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+<<<<<<< Updated upstream
+    <list default="true" id="3282961d-9cd0-4a92-a38b-4e37f82a3c00" name="Changes" comment="Proyecto rama main(Master) funcional conectado a base de datos." />
+=======
+    <list default="true" id="ab62e137-7e71-420c-9f2c-36cca619d242" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+<<<<<<< Updated upstream
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Jagudelo" />
+      </map>
+    </option>
+=======
+>>>>>>> Stashed changes
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="development" />
+<<<<<<< Updated upstream
+                    <option name="lastUsedInstant" value="1662089562" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Jagudelo" />
+                    <option name="lastUsedInstant" value="1662089535" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1662089443" />
+=======
+                    <option name="lastUsedInstant" value="1662089026" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Jagudelo" />
+                    <option name="lastUsedInstant" value="1662089025" />
+>>>>>>> Stashed changes
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/.." />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+<<<<<<< Updated upstream
+  <component name="ProjectId" id="2ECArO4WUoihWfSlF8Wgj0ow76x" />
+=======
+  <component name="ProjectId" id="2EC99vyJIJtCScULwDJFyk4b8fg" />
+>>>>>>> Stashed changes
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+<<<<<<< Updated upstream
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+=======
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/joseagudelo/Documents/GitHub/DevPlus/Mintic_ciclo_3"
+>>>>>>> Stashed changes
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+<<<<<<< Updated upstream
+      <changelist id="3282961d-9cd0-4a92-a38b-4e37f82a3c00" name="Changes" comment="" />
+      <created>1662089391972</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662089391972</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Proyecto rama main(Master) funcional conectado a base de datos.">
+      <created>1662089511221</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662089511221</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+=======
+      <changelist id="ab62e137-7e71-420c-9f2c-36cca619d242" name="Changes" comment="" />
+      <created>1662088554262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662088554262</updated>
+    </task>
+>>>>>>> Stashed changes
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+<<<<<<< Updated upstream
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Proyecto rama main(Master) funcional conectado a base de datos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto rama main(Master) funcional conectado a base de datos." />
+  </component>
+=======
+>>>>>>> Stashed changes
+</project>
