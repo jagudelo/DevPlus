@@ -5,5 +5,5 @@ import net.minidev.json.JSONUtil;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class Empresa {
-    */Comentario de prueba*/
+
 }
