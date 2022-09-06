@@ -1,22 +1,19 @@
-package co.Mintic.Ciclo3.modulos;
+package co.Mintic.Ciclo3.modelos;
 
-import net.minidev.json.JSONUtil;
+import javax.persistence.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 @Entity
-@Table(name="empresa")
+@Table(name="Empresa")
 public class Empresa {
     @Id
+    private int id;
+
     private String nombre_empresa;
-    @Column(name="direccion")
+
     private String direccion;
-    @Column(name="telefono")
+
     private int telefono;
-    @Column(name="nit")
+
     private int nit;
 
     public Empresa(String nombre_empresa, String direccion, int telefono, int nit) {
@@ -27,6 +24,14 @@ public class Empresa {
     }
 
     public Empresa() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre_empresa() {
