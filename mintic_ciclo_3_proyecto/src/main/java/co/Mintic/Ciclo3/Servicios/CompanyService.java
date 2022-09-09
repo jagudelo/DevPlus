@@ -30,6 +30,16 @@ public class CompanyService {
         return  false;
     }
 
+    public boolean deleteEmpresa(Integer id){
+        companyRep.deleteById(id);
+        if(getEmpresaById(id)!=null){
+            return false;
+        }
+        return true;
+    }
+
+
+
 
 
 }

@@ -10,10 +10,10 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
+
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class Ciclo3Application {
-
 	@GetMapping("/test")
 	public String test(){
 		Empresa company = new Empresa("Morfo-Clothing", "Carrera 29 # 78 01", 2397733, 1013654223);
