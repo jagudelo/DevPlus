@@ -1,27 +1,41 @@
 package co.Mintic.Ciclo3.modelos;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
-@Table(name="movimientos")
+@Table(name="Movimientos")
 public class MovimientoDinero {
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private long monto;
     private String concepto;
     @ManyToOne
     @JoinColumn(name = "empleado_id")
-    private Empleado empleado;
+    private Empleado usuario;
+
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date fecha;
 
     public MovimientoDinero() {
     }
 
-    public MovimientoDinero(long monto, String concepto, Empleado empleado) {
+    public MovimientoDinero(long monto, String concepto, Empleado empleado, Date fecha) {
         this.monto = monto;
         this.concepto = concepto;
-        this.empleado = empleado;
+        this.usuario = empleado;
+        this.fecha=fecha;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public long getMonto() {
@@ -40,13 +54,19 @@ public class MovimientoDinero {
         this.concepto = concepto;
     }
 
-    public Empleado getEmpleado() {
-        return empleado;
+    public Empleado getUsuario() {
+        return usuario;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setUsuario(Empleado empleado) {
+        this.usuario = empleado;
     }
 
+    public Date getFecha() {
+        return fecha;
+    }
 
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 }

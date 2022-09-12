@@ -32,10 +32,10 @@ public class CompanyService {
 
     public boolean deleteEmpresa(Integer id){
         companyRep.deleteById(id);
-        if(getEmpresaById(id)!=null){
-            return false;
+        if(companyRep.findById(id)!=null){
+            return true;
         }
-        return true;
+        return false;
     }
 
 
