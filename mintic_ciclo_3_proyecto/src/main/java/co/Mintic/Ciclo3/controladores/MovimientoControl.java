@@ -2,11 +2,10 @@ package co.Mintic.Ciclo3.controladores;
 
 
 import co.Mintic.Ciclo3.Servicios.CompanyService;
+import co.Mintic.Ciclo3.modelos.MovimientoDinero;
+import co.Mintic.Ciclo3.repositorio.MovimientoRep;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.Id;
 import java.util.List;
@@ -16,10 +15,8 @@ public class MovimientoControl {
     @Autowired
     CompanyService companyService;
 
-    @GetMapping("/movimientoDinero")
-    private List<Id> verId(){
-        List<Id> Ids = companyService.verId();
-        return Ids;
+    @PostMapping("/movimientoDinero")
+    private void crearId(@RequestBody MovimientoDinero)
 
     }
 }
