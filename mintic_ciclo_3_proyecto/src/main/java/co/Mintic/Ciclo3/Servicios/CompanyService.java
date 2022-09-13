@@ -2,11 +2,9 @@ package co.Mintic.Ciclo3.Servicios;
 
 import co.Mintic.Ciclo3.modelos.Empresa;
 import co.Mintic.Ciclo3.repositorio.CompanyRep;
-import co.Mintic.Ciclo3.repositorio.MovimientoRep;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,11 +30,15 @@ public class CompanyService {
         return  false;
     }
 
-    public List<Id> verId(){
-        List<Id> IdList = new ArrayList<>();
-        companyRep.addAll(MovimientoRep.findAll());
-        return IdList;
+    public boolean deleteEmpresa(Integer id){
+        companyRep.deleteById(id);
+        if(companyRep.findById(id)!=null){
+            return true;
+        }
+        return false;
     }
+
+
 
 
 
