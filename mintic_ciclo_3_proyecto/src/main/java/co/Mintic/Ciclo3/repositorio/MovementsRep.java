@@ -7,9 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+
 @Repository
 public interface MovementsRep extends JpaRepository<MovimientoDinero, Integer> {
-    @Query(value = "select * from movimientos where empelado_id= ?1", nativeQuery = true)
+    @Query(value = "select * from movimientos where empleado_id= ?1", nativeQuery = true)
     public abstract ArrayList<MovimientoDinero> findByEmpleado(Integer Id);
 
     @Query(value="select * from movimientos where empleado_id in (select id from empleado where empresa_id= ?1)", nativeQuery = true)

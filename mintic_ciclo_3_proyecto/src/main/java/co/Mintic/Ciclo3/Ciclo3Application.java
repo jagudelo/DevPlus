@@ -22,5 +22,4 @@ public class Ciclo3Application {
 		System.out.println("Hello world");
 
 	}
-
 }
