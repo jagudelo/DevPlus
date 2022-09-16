@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
+@SpringBootApplication//(exclude = {SecurityAutoConfiguration.class})
 public class Ciclo3Application {
 
 

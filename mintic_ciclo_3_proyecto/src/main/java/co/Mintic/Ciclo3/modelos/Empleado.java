@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name="Empleado")
 public class Empleado {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String correo;
@@ -15,14 +15,19 @@ public class Empleado {
     private Empresa empresa;
     private String rol;
 
+    private String pass;
+
+    private Boolean estado;
     public Empleado() {
     }
 
-    public Empleado(String nombre, String correo, Empresa empresa, String rol) {
+    public Empleado(String nombre, String correo, Empresa empresa, String rol, String pass, Boolean estado) {
         this.nombre = nombre;
         this.correo = correo;
         this.empresa = empresa;
         this.rol = rol;
+        this.pass = pass;
+        this.estado = estado;
     }
 
     public int getId() {
@@ -65,5 +70,19 @@ public class Empleado {
         this.empresa = empresa;
     }
 
+    public String getPass() {
+        return pass;
+    }
 
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
 }
