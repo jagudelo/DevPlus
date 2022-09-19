@@ -5,6 +5,9 @@ import co.Mintic.Ciclo3.modelos.Empleado;
 import co.Mintic.Ciclo3.modelos.Empresa;
 import co.Mintic.Ciclo3.Servicios.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,6 +48,8 @@ public class Employe {
 
     @PostMapping("/GuardarEmpleado")
     public String guardarEmpleado(Empleado empl, RedirectAttributes redirectAttributes){
+        String passEncriptada =passwordEncoder().encode(empl.getPass());
+        empl.setPass(passEncriptada);
         if(employeService.saveOrUpdateEmpleado(empl)==true){
             redirectAttributes.addFlashAttribute("mensaje","saveOK");
             return "redirect:/VerEmpleados";
@@ -66,6 +71,8 @@ public class Employe {
 
     @PostMapping("/ActualizarEmpleado")
     public String updateEmpleado(@ModelAttribute("empl") Empleado empl, RedirectAttributes redirectAttributes){
+        String passEncriptada =passwordEncoder().encode(empl.getPass());
+        empl.setPass(passEncriptada);
         if(employeService.saveOrUpdateEmpleado(empl)){
             redirectAttributes.addFlashAttribute("mensaje","updateOK");
             return "redirect:/VerEmpleados";
@@ -90,6 +97,12 @@ public class Employe {
         List<Empleado> listaEmpleados = employeService.obtenerPorEmpresa(id);
         model.addAttribute("emplelist",listaEmpleados);
         return "verEmpleados"; //Llamamos al html con el emplelist de los empleados filtrados
+    }
+
+    //Encriptado de contraseña
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 
 
