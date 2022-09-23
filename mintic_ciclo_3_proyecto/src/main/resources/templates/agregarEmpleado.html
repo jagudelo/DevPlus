@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link th:href="@{/style.css}" rel="stylesheet">
+    <style>
+        .button {
+            border-top: 10px solid white;
+        }
+     </style>
 </head>
 <body>
 
@@ -189,16 +194,20 @@
 <!--    </div>-->
 <!--</div>-->
 
-
+    <div class="container">
     <!--Boton para enviar todo y ejecutar accion -->
     <div class="row">
-      <div class="col-md-2">
+      <div class="button">
         <button class="btn btn-success">Registrar empleado</button>
       </div>
     </div>
 
-
-
+    <div class="row" id="atras">
+      <div class="button">
+        <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
+      </div>
+    </div>
+    </div>
       </form>
       </main>
 
@@ -208,7 +217,7 @@
 
 
 
-  <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
+
 
   <!-- jQuery library -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>

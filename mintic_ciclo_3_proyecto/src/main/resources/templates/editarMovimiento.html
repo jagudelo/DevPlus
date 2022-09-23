@@ -4,91 +4,152 @@
   <title>Editar datos de Movimiento - Ciclo3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+  <link th:href="@{/style.css}" rel="stylesheet">
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 </head>
+
+
 <body>
 
-<div class="container">
-  <h1> Modifique aqui los datos del Movimiento</h1>
-  <br>
-  <!--Crear formulario para cambiar los datos del movimiento y guardarlo en el objeto mov -->
-  <form th:action="@{/ActualizarMovimiento}" th:object="${mov}" method="post">
-    <!--Campo para id-->
-    <div class="row">
-      <div class="form-group col-md-12">
-        <label class="col-md-3" for="id">ID del movimiento:</label>
-        <div class="col-md-6">
-          <input type="text" th:field="*{id}" class="form-control" id="id" required="required" readonly></div>
+<!-- PANEL SUPERIOR -->
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Morfo</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Buscar..." aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" th:href="@{/logout}">Cerrar Sesión</a>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="sidebar-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+              Empresas <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/VerEmpleados}">
+              <span data-feather="file"></span>
+              Empleados
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
-    <!--Campo para Concepto-->
-    <div class="row">
-      <div class="form-group col-md-12">
-        <label class="col-md-3" for="concepto">Concepto del Movimiento:</label>
-        <div class="col-md-6">
-          <select th:field="*{concepto}" class="form-control" id="concepto" required="required">
-            <option th:value=1>Papeleria</option>
-            <option th:value=2>Servicios Publicos/Privados</option>
-            <option th:value=3>Operativos</option>
-            <option th:value=4>Caja menor</option>
-            <option th:value=5>Tributario</option>
-            <option th:value=6>Mobiliario</option>
-            <option th:value=7>Maquinaria y Equipo</option>
-            <option th:value=8>Nomina</option>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Modifique aqui los datos del Movimiento</h1>
+      </div>
 
-          </select>
+
+      <!--Crear formulario para cambiar los datos del movimiento y guardarlo en el objeto mov -->
+      <form th:action="@{/ActualizarMovimiento}" th:object="${mov}" method="post">
+        <!--Campo para id-->
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-3" for="id">ID del movimiento:</label>
+            <div class="col-md-6">
+              <input type="text" th:field="*{id}" class="form-control" id="id" required="required" readonly></div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!--Campo para monto-->
-    <div class="row">
-      <div class="form-group col-md-12">
-        <label class="col-md-3" for="monto">Valor del movimiento:</label>
-        <div class="col-md-6">
-          <input type="number" th:field="*{monto}" class="form-control" id="monto" required="required"></div>
-      </div>
-    </div>
+        <!--Campo para Concepto-->
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-3" for="concepto">Concepto del Movimiento:</label>
+            <div class="col-md-6">
+              <select th:field="*{concepto}" class="form-control" id="concepto" required="required">
+                <option th:value=1>Papeleria</option>
+                <option th:value=2>Servicios Publicos/Privados</option>
+                <option th:value=3>Operativos</option>
+                <option th:value=4>Caja menor</option>
+                <option th:value=5>Tributario</option>
+                <option th:value=6>Mobiliario</option>
+                <option th:value=7>Maquinaria y Equipo</option>
+                <option th:value=8>Nomina</option>
 
-    <!--Campo para empleado (usuario responsable)-->
-    <div class="row">
-      <div class="form-group col-md-12">
-        <label class="col-md-3" for="usuario">Empleado responsable:</label>
-        <div class="col-md-6">
-          <select th:field="*{usuario}" class="form-control" id="usuario" required="required">
-            <option th:each="empleado : ${emplelist}" th:text="${empleado.nombre}" th:value="${empleado.id}"></option>
-          </select>
+              </select>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!--Campo para fecha-->
-    <div class="row">
-      <div class="form-group col-md-12">
-        <label class="col-md-3" for="fecha">Fecha del movimiento:</label>
-        <div class="col-md-6">
-          <input type="date" th:field="*{fecha}" class="form-control" id="fecha" required="required" readonly></div>
-      </div>
-    </div>
+        <!--Campo para monto-->
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-3" for="monto">Valor del movimiento:</label>
+            <div class="col-md-6">
+              <input type="number" th:field="*{monto}" class="form-control" id="monto" required="required"></div>
+          </div>
+        </div>
+
+        <!--Campo para empleado (usuario responsable)-->
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-3" for="usuario">Empleado responsable:</label>
+            <div class="col-md-6">
+              <select th:field="*{usuario}" class="form-control" id="usuario" required="required">
+                <option th:each="empleado : ${emplelist}" th:text="${empleado.nombre}" th:value="${empleado.id}"></option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!--Campo para fecha-->
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label class="col-md-3" for="fecha">Fecha del movimiento:</label>
+            <div class="col-md-6">
+              <input type="date" th:field="*{fecha}" class="form-control" id="fecha" required="required" readonly></div>
+          </div>
+        </div>
 
 
 
-    <!--Boton para enviar todo y ejecutar accion -->
-    <div class="row">
-      <div class="col-md-2">
-        <button class="btn btn-success">Actualizar Movimiento</button>
-      </div>
-    </div>
+        <!--Boton para enviar todo y ejecutar accion -->
+        <div class="row">
+          <div class="col-md-2">
+            <button class="btn btn-success">Actualizar Movimiento</button>
+          </div>
+        </div>
 
-  </form>
+      </form>
 
-  <br>
-  <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
-
+      <br>
+      <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
+</div>
 </div>
 
 </body>
