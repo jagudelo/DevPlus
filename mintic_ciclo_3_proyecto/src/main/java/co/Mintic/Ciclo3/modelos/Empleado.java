@@ -17,11 +17,13 @@ public class Empleado {
 
     private String pass;
 
-    private Boolean estado;
+    private boolean estado;
+
     public Empleado() {
     }
 
-    public Empleado(String nombre, String correo, Empresa empresa, String rol, String pass, Boolean estado) {
+    public Empleado(int id, String nombre, String correo, Empresa empresa, String rol, String pass, boolean estado) {
+        this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.empresa = empresa;
@@ -54,20 +56,20 @@ public class Empleado {
         this.correo = correo;
     }
 
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
     public Empresa getEmpresa() {
         return empresa;
     }
 
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     public String getPass() {
@@ -78,11 +80,14 @@ public class Empleado {
         this.pass = pass;
     }
 
-    public Boolean getEstado() {
+    public boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(Boolean estado) {
+    public void setEstado(boolean estado) {
         this.estado = estado;
     }
 }
+
+
+
