@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Editar Empleado - Ciclo3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link th:href="@{/style.css}" rel="stylesheet">
+  <style>
+        .button {
+            border-top: 10px solid white;
+            border-left:30px solid white;
+        }
+     </style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1> Actualice aqui los datos del Empleado</h1>
+  <br>
+  <!--Crear formulario para llenar los datos de la empresa y guardarlo en el objeto emp -->
+  <form th:action="@{/ActualizarEmpleado}" th:object="${empl}" method="post">
+
+    <!--Campo para id-->
+
+      <div class="form-group col-md-12">
+        <label> ID empleado</label>
+        <input type="text" th:field="*{id}" class="form-control" id="id" required="required" readonly></div>
+
+
+
+    <!--    borrar esto-->
+    <div class="form-group col-md-12">
+      <label for="col-md-3"> Nombre del empleado</label>
+      <input type="text" th:field="*{nombre}" class="form-control" id="nombre" placeholder="nombre del empleado" required="required">
+    </div>
+    <!--  hasta aqui-->
+
+<!--    &lt;!&ndash;Campo para nombre&ndash;&gt;-->
+<!--    <div class="row">-->
+<!--      <div class="form-group col-md-12">-->
+<!--        <label class="col-md-3" for="nombre">Nombre del Empleado:</label>-->
+<!--        <div class="col-md-6">-->
+<!--          <input type="text" th:field="*{nombre}" class="form-control" id="nombre" required="required"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!--    borrar esto-->
+    <div class="form-group col-md-12">
+      <label for="correo">Correo del empleado:</label>
+      <input type="email" th:field="*{correo}" class="form-control" id="correo" placeholder="nombre@example.com" required="required">
+    </div>
+    <!--  hasta aqui-->
+
+
+<!--    &lt;!&ndash;Campo para correo&ndash;&gt;-->
+<!--    <div class="row">-->
+<!--      <div class="form-group col-md-12">-->
+<!--        <label class="col-md-3" for="correo">Correo del empleado:</label>-->
+<!--        <div class="col-md-6">-->
+<!--          <input type="email" th:field="*{correo}" class="form-control" id="correo" required="required"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!--Borrar este-->
+    <div class="form-group col-md-12">
+      <label  for="rol">Empresa:</label>
+      <select th:field="*{empresa}" class="form-control" id="empresa" required="required">
+        <option th:each="empresa : ${emprelist}" th:text="${empresa.nombre}" th:value="${empresa.id}"></option>
+      </select>
+    </div>
+    <!--Hasta aqui-->
+
+
+<!--    &lt;!&ndash;Campo para empresa&ndash;&gt;-->
+<!--    <div class="row">-->
+<!--      <div class="form-group col-md-12">-->
+<!--        <label class="col-md-3" for="empresa">Empresa a la que pertence:</label>-->
+<!--        <div class="col-md-6">-->
+<!--          <select th:field="*{empresa}" class="form-control" id="empresa" required="required">-->
+<!--            <option th:each="empresa : ${emprelist}" th:text="${empresa.nombre}" th:value="${empresa.id}"></option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!--Borrar este-->
+    <div class="form-group col-md-12">
+      <label  for="rol">Rol del empleado:</label>
+      <select th:field="*{rol}" class="form-control" id="rol" required="required">
+        <option th:value='1'>Administrativo</option>
+        <option th:value='2'>Operativo</option>
+      </select>
+    </div>
+
+<!--    &lt;!&ndash;Campo para Rol&ndash;&gt;-->
+<!--    <div class="row">-->
+<!--      <div class="form-group col-md-12">-->
+<!--        <label class="col-md-3" for="rol">Rol del empleado:</label>-->
+<!--        <div class="col-md-6">-->
+<!--          <select th:field="*{rol}" class="form-control" id="rol" required="required">-->
+<!--            <option th:value='1'>Administrativo</option>-->
+<!--            <option th:value='2'>Operativo</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+    <!--Borrar este-->
+    <div class="form-group col-md-12">
+      <label for="pass"> Contraseña:</label>
+      <input type="password" th:field="*{pass}" class="form-control" id="pass" placeholder="Contraseña" required="required">
+    </div>
+    <!--Hasta aqui-->
+
+<!--    -->
+<!--    <div class="row">-->
+<!--      <div class="form-group col-md-12">-->
+<!--        <label class="col-md-3" for="pass">Contraseña:</label>-->
+<!--        <div class="col-md-6">-->
+<!--          <input type="password" th:field="*{pass}" class="form-control" id="pass" required="required"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!--Borrar este-->
+    <div class="form-group col-md-12">
+      <label  for="estado">Estado:</label>
+      <select th:field="*{estado}" class="form-control" id="estado" required="required">
+        <option th:value=1>Activo</option>
+        <option th:value=0>Inactivo</option>
+      </select>
+    </div>
+    <!--Hasta aqui-->
+
+<!--    <div class="row">-->
+<!--      <div class="form-group col-md-12">-->
+<!--        <label class="col-md-3" for="estado">Estado:</label>-->
+<!--        <div class="col-md-6">-->
+<!--          <select th:field="*{estado}" class="form-control" id="estado" required="required">-->
+<!--            <option th:value=1>Activo</option>-->
+<!--            <option th:value=0>Inactivo</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+      <!--Boton para enviar todo y ejecutar accion -->
+      <div class="row">
+        <div class="button">
+          <button class="btn btn-success">Registrar empleado</button>
+        </div>
+      </div>
+
+      <div class="row" id="atras">
+        <div class="button">
+          <a href="javascript: history.go(-1)" class="btn btn-info" role="button">Atrás</a>
+        </div>
+      </div>
+
+
+</div>
+</body>
+</html>
