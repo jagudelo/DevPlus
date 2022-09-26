@@ -1,2 +1,0 @@
-# DevPlus
-Proyecto Mintic
